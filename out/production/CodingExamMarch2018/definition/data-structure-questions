@@ -1,14 +1,31 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
-A.
+A.  We need data structure for storing and organizing information so that it can be retrieved, and used most productively whenever needed.
 What are the various operations that can be performed on different Data Structures?
+A.  Searching- It is used to find out the location of the data item if it exists in the given collection of data items.
+    Deleting- It is used to delete an existing data item from the given collection of data items.
+    Inserting- It is used to add a new data item in the given collection of data items.
+    Merging- It is used to combine the data items of two sorted files into single file in the sorted form.
+    Traversing- It is used to access each data item exactly once so that it can be processed.
+    Sorting- It is used to arrange the data items in some order i.e. in ascending or descending order in case of numerical
+    data and in dictionary order in case of alphanumeric data.
 List out the areas in which data structures are applied extensively?
+A.  Compiler Design, Operating System, Database Management System, Statistical analysis package, Numerical Analysis,
+    Graphics, Artificial Intelligence, Simulation.
 what is an Array?
+A.  An array is a container object hat contains a fixed number of values of a similar data type.
 what is the difference between the Array and ArrayList?
+A.  Array is static in size ie. fixed length data structure whereas ArrayList is dynamic in size.  Array can be multi
+    dimensional, while ArrayList is always single dimensional. We insert elements using the assignment operator in array while
+    we can insert elements into the arraylist object using the add() method.
 what is LinkedList?
+A.  A linked list is a linear data structure where each element is a seerate object. Each element
+    consists of two items- the data and a reference to the next node. The last node has a reference to null.
 How is an Array different from Linked List?
+
 what is queue?
+A.  Queue in java represents an ordered list of objects. It is designed to have elements inserted at the end of the queue, and elements removed from the beginning of the queue.
 what is stack?
 what is FIFO and LIFO?
 what is the order of complexity?
