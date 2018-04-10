@@ -61,7 +61,7 @@ public class ConnectDB {
         try {
             connectToMySql();
             statement = connect.createStatement();
-            resultSet = statement.executeQuery("select * from " + tableName);
+              resultSet = statement.executeQuery("select * from " + tableName);
             data = getResultSetData(resultSet, columnName);
         } catch (ClassNotFoundException e) {
             throw e;
@@ -304,4 +304,6 @@ public class ConnectDB {
 
     }
 
+    public void InsertDataFromArryToMySql(int[] array1, String tbl_prime_number, String column_prime_number) {
+    }
 }

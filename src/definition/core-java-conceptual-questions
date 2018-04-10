@@ -228,7 +228,7 @@ What are the dependencies for this project?
 A.  All the added JARs, testng jar, mysql-connector-java, mongo-java-driver.
 
 what is dependency injection in java?
- It is the inversion of control. A class should not configure its dependencies statically but should be
+ It is the inversion of control.  A class should not configure its dependencies statically but should be
  configured from the outside according to this concept.
 
 What is static binding and dynamic binding?
