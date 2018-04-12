@@ -16,7 +16,7 @@ import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-
+import java.util.*;
 /**
  * Created by mrahman on 04/02/18.
  */
@@ -30,14 +30,14 @@ public class ConnectDB {
     public static PreparedStatement ps = null;
     public static ResultSet resultSet = null;
 
-    public Properties loadProperties() throws IOException{
+    public static Properties loadProperties() throws IOException{
         Properties prop = new Properties();
         InputStream ism = new FileInputStream("src/secret.properties");
         prop.load(ism);
         ism.close();
         return prop;
     }
-    public Connection connectToMySql() throws IOException, SQLException, ClassNotFoundException {
+    public static Connection connectToMySql() throws IOException, SQLException, ClassNotFoundException {
         Properties prop = loadProperties();
         String driverClass = prop.getProperty("MYSQLJDBC.driver");
         String url = prop.getProperty("MYSQLJDBC.url");
@@ -48,7 +48,7 @@ public class ConnectDB {
         System.out.println("Database is connected");
         return connect;
     }
-    public MongoDatabase connectToMongoDB() {
+    public static  MongoDatabase connectToMongoDB() {
         MongoClient mongoClient = new MongoClient();
         mongoDatabase = mongoClient.getDatabase("students");
         System.out.println("Database Connected");
@@ -300,10 +300,19 @@ public class ConnectDB {
         }
         String message = insertToMongoDB(new User("Tanima Chowdhury", 3539));
         List<User> user = readFromMongoDB();
-        */
 
+*/
     }
 
     public void InsertDataFromArryToMySql(int[] array1, String tbl_prime_number, String column_prime_number) {
+    }
+
+    public void createTableFromStringToMySql(String selfDrivingCar, String text) {
+    }
+
+    public void InsertDataFromStringToMySql(String text, String selfDrivingCar, String text1) {
+    }
+
+    public void InsertDataFromArrayListToMySql(List list, String array_list, String listElement) {
     }
 }

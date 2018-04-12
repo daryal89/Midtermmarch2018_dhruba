@@ -31,13 +31,5 @@ public class Pattern {
         }
         System.out.println(" ");
 
-		/*
-		connectDB.InsertDataFromArryToMySql(array1, "tbl_pattern", "column_pattern");
-		storePattern = connectDB.readDataBase("tbl_pattern", "column_pattern");
-		System.out.println("Data is reading from the Table (tbl_pattern) and displaying to the console");
-		for (String st : storePattern) {
-			System.out.print(" " + st);
-		}
-		*/
     }
 }

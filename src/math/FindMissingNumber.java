@@ -1,11 +1,10 @@
 package math;
 
 /**
- * Created by mrahman on 04/22/17.
  */
 public class FindMissingNumber {
 
-    // Method to find missing number
+    // Static Helper Method to find missing number
     static int findMissingNum(int a[], int n) {
         int i, total;
         total = (n + 1) * (n + 2) / 2;

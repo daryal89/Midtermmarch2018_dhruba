@@ -27,7 +27,7 @@ public class DuplicateWord {
             if (wordMap.get(word) == null) {
                 wordMap.put(word, wordCount);
             } else {
-                System.out.println("Duplicated/Repeated word: " + word);
+                System.out.println("This is the Repeated word: " + word);
 
                 wordMap.replace(word, wordMap.get(word) + 1);
                 System.out.println("Number of occurrence: " + wordMap.get(word));

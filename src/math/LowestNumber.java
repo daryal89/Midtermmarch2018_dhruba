@@ -37,5 +37,4 @@ public class LowestNumber {
 			System.out.println(st);
 		}
 	}
-
 }

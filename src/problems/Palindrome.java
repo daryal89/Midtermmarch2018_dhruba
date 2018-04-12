@@ -14,8 +14,8 @@ public class Palindrome {
             reverseStr = reverseStr + originalStr.charAt(i);
 
         if (originalStr.equalsIgnoreCase(reverseStr))
-            System.out.println(originalStr + " :  This word is a palindrome");
+            System.out.println("This word is a palindrome :"+originalStr );
         else
-            System.out.println(originalStr + "  :  This word is not a palindrome");
+            System.out.println("This word is not a palindrome :"+originalStr );
     }
 }

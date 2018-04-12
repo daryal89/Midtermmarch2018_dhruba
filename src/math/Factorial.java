@@ -19,7 +19,6 @@ public class Factorial {
         }
         System.out.println("Factorial of 5 (5!)  = " + fact);
 
-
         // Recursion Method to find the factorial of 5
         int factorial = fact(5);
         System.out.println("Factorial of 5 (5!) = " + factorial);

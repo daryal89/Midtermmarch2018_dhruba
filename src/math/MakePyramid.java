@@ -29,7 +29,6 @@ public class MakePyramid {
             for (int j = 0; j < k; j++) {
                 System.out.print(" ");  // printing spaces
             }
-
             k = k - 1;  // decrementing k after each loop
 
             //  inner loop to handle number of column. values changes according to outer loop
