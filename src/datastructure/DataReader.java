@@ -26,7 +26,7 @@ public class DataReader {
          * Use For Each loop/while loop/Iterator to retrieve data.
          */
 
-        String textFile = System.getProperty("user.dir") + "data/self-driving-car";
+        String textFile = System.getProperty("user.dir") + "\\src\\data\\self-driving-car";
 
         FileReader fr = null;
         BufferedReader br = null;
@@ -54,13 +54,13 @@ public class DataReader {
                 for (int i = 0; i < words.length; i++) {       //loop to read
                     stack.push(words[i]);
 
-                    //System.out.println("Stack "+stack.peek());
+                    System.out.println("Stack "+stack.peek());
                     linkedList.add(words[i]);
-                    //System.out.println("LinkedList "+linkedList.get(i));
+                    System.out.println("LinkedList "+linkedList.get(i));
                 }
 
                 //inserting data into table in database
-                connectDB.InsertDataFromStringToMySql(text, "SelfDrivingCar", "text");
+                connectDB.insertDataFromStringToMySql( text,"SelfDrivingCar", "text");
             }
             System.out.println("Total word count: " + count);
 

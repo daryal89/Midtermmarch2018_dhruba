@@ -67,7 +67,7 @@ public class UseMap {
         }
         //Connect to MySql Database
         ConnectDB connectDB = new ConnectDB();
-/*
+
         //Create table in the database
         connectDB.createTableFromStringToMySql("use_map", "mapKey", "mapValue");
         for (Object str : list.keySet()) {
@@ -85,6 +85,6 @@ public class UseMap {
         for (String st : numbers) {
             System.out.println(st);
         }
-        */
+
     }
 }

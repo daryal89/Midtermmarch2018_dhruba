@@ -18,7 +18,7 @@ public interface Employee {
     public void assignDepartment();
 	
 	//calculate employee salary
-	public double calculateSalary();
+	public double calculateSalary(double salary);
 	
 	//employee benefit
 	public void benefitLayout();

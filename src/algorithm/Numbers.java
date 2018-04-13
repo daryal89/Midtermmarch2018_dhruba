@@ -21,10 +21,9 @@ public class Numbers {
 	 */
 
 	public static void main(String[] args) throws Exception {
-		int [] num = new int[100];
+		int [] num = new int[25];
 		storeRandomNumbers(num);
 		ConnectDB connectDB = new ConnectDB();
-
 		Sort algo = new Sort();
 
 		//Selection Sort
@@ -35,76 +34,78 @@ public class Numbers {
         List<String> numbers = connectDB.readDataBase("selection_sort", "SortingNumbers");
         printValue(numbers);
 		int n = num.length;
+		//unsort the array
 		randomize (num, n);
-
+		//--------------------------------------------------------------------------------
 		//Insertion Sort
 		algo.insertionSort(num);
 		long insertionSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + insertionSortExecutionTime + " milli sec");
-		connectDB.InsertDataFromArryToMySql(num, "insertion_sort", "SortingNumbers");
+		connectDB.insertDataFromArrayToMySql(num, "insertion_sort", "SortingNumbers");
 		List<String> numbers1 = connectDB.readDataBase("insertion_sort", "SortingNumbers");
 		printValue(numbers);
 		randomize(num,n);
-
+		//----------------------------------------------------------------------------------
 		//Bubble Sort
 		algo.bubbleSort(num);
 		long bubbleSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of " + num.length + " numbers in Bubble Sort take: " + bubbleSortExecutionTime + " milli sec");
-		connectDB.InsertDataFromArryToMySql(num, "bubble_sort", "SortingNumbers");
+		connectDB.insertDataFromArrayToMySql(num, "bubble_sort", "SortingNumbers");
 		List<String> numbers2 = connectDB.readDataBase("bubble_sort", "SortingNumbers");
         printValue(numbers);
 		randomize (num, n);
-
+		//-------------------------------------------------------------------------------------
 		//Merge Sort
 		algo.mergeSort(num);
 		long mergeSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of " + num.length + " numbers in Merge Sort take: " + mergeSortExecutionTime + " milli sec");
-		connectDB.InsertDataFromArryToMySql(num, "merge_sort", "SortingNumbers");
+		connectDB.insertDataFromArrayToMySql(num, "merge_sort", "SortingNumbers");
 		List<String> numbers3 = connectDB.readDataBase("merge_sort", "SortingNumbers");
         printValue(numbers);
 		randomize (num, n);
-
+		//----------------------------------------------------------------------------------------
 		//Quick Sort
 		algo.quickSort(num);
 		long quickSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of " + num.length + " numbers in Quick Sort take: " + quickSortExecutionTime + " milli sec");
-		connectDB.InsertDataFromArryToMySql(num, "quick_sort", "SortingNumbers");
+		connectDB.insertDataFromArrayToMySql(num, "quick_sort", "SortingNumbers");
 		List<String> numbers4 = connectDB.readDataBase("quick_sort", "SortingNumbers");
         printValue(numbers);
 		randomize (num, n);
-
+		//--------------------------------------------------------------------------------------------
 		//Heap Sort
 		algo.heapSort(num);
 		long heapSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of " + num.length + " numbers in Heap Sort take: " + heapSortExecutionTime + " milli sec");
-		connectDB.InsertDataFromArryToMySql(num, "heap_sort", "SortingNumbers");
+		connectDB.insertDataFromArrayToMySql(num, "heap_sort", "SortingNumbers");
 		List<String> numbers5 = connectDB.readDataBase("heap_sort", "SortingNumbers");
         printValue(numbers);
 		randomize (num, n);
-
+		//---------------------------------------------------------------------------------------------
 		//Bucket Sort
 		algo.bucketSort(num);
 		long bucketSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of " + num.length + " numbers in Bucket Sort take: " + bucketSortExecutionTime + " milli sec");
-		connectDB.InsertDataFromArryToMySql(num, "bucket_sort", "SortingNumbers");
+		connectDB.insertDataFromArrayToMySql(num, "bucket_sort", "SortingNumbers");
 		List<String> numbers6 = connectDB.readDataBase("bucket_sort", "SortingNumbers");
         printValue(numbers);
 		randomize (num, n);
-
+		//----------------------------------------------------------------------------------------------
 		//Shell Sort
 		algo.shellSort(num);
 		long shellSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of " + num.length + " numbers in Shell Sort take: " + shellSortExecutionTime + " milli sec");
-		connectDB.InsertDataFromArryToMySql(num, "shell_sort", "SortingNumbers");
+		connectDB.insertDataFromArrayToMySql(num, "shell_sort", "SortingNumbers");
 		List<String> numbers7 = connectDB.readDataBase("shell_sort", "SortingNumbers");
         printValue(numbers);
         randomize(num,n);
+        //-----------------------------------------------------------------------------------------------
 	}
 
 	public static void storeRandomNumbers(int [] num){
 		Random rand = new Random();
 		for(int i=0; i<num.length; i++){
-			num[i] = rand.nextInt(1000);
+			num[i] = rand.nextInt(10000);
 		}
 	}
 

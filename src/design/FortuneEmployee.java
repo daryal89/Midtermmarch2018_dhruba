@@ -14,7 +14,7 @@ public class FortuneEmployee {
      * <p>
      * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
      **/
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         String mission = "To Uplift the lifestyle for individuals";
         String vision = "Stay hungry stay foolish will lead you better lifestyle.";
 
@@ -55,7 +55,7 @@ public class FortuneEmployee {
         employee4.setPerformance(1);
         double bonus105 = employee4.calculateEmployeeBonus(employee5.getSalary(), employee5.getPerformance());
 
-      //  EmployeeInfo.calculateEmployeePension(employee1.getSalary());
+      EmployeeInfo.calculateEmployeePension();
 
         Map<Integer, List<Object>> employeeInfo = new HashMap<Integer, List<Object>>();
         List<Object> employeeRecord101 = new ArrayList<Object>();
@@ -73,7 +73,7 @@ public class FortuneEmployee {
 
         ConnectDB connectDB = new ConnectDB();
 
-       // connectDB.createTableFromStringToMySql("employee_record", "employee_id", "employee_info");
+        connectDB.createTableFromStringToMySql("employee_record", "employee_id", "employee_info");
 
         for (Integer obj : employeeInfo.keySet()) {
             for (Object obj1 : employeeInfo.get(obj)) {
@@ -81,13 +81,13 @@ public class FortuneEmployee {
                 List<String> list1 = new ArrayList<>();
                 list1.add(obj.toString());
                 list1.add(obj1.toString());
-             //   connectDB.InsertDataFromArrayListToMySql(list1, "employee_record", "employee_id", "employee_info");
+            connectDB.InsertDataFromArrayListToMySql(list1, "employee_record", "employee_id", "employee_info");
             }
         }
         System.out.println("Reading from database");
-        //List<String> empRec = connectDB.readDataBase("employee_record", "employee_id", "employee_info");
-       // for (String emp : empRec) {
-       //
-        // }
+        List<String> empRec = connectDB.readDataBase("employee_record", "employee_id");
+       for (String emp : empRec) {
+
+        }
     }
 }

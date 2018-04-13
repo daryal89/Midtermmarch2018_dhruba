@@ -64,10 +64,10 @@ public class UseArrayList {
 		ConnectDB connectDB = new ConnectDB();
 
 		//Create table in the database
-		connectDB.createTableFromStringToMySql("array_list","listElement");
+		connectDB.createTableFromStringToMySql("array_list",  "listElement");
 
 		//Insert data in the database
-		connectDB.InsertDataFromArrayListToMySql(list,"array_list", "listElement");
+		connectDB.insertDataFromArrayListToMySql1(list,"array_list", "listElement");
 
 		//Read data from database
 		List<String> numbers = connectDB.readDataBase("array_list", "listElement");

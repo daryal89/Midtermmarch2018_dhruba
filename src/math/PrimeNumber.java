@@ -61,9 +61,9 @@ public class PrimeNumber {
         final long executionTime = endTime - startTime;
         System.out.println("\nExecution time for calculating prime number from 1,000,000 numbers: " + executionTime + " milliseconds");
 
-        connectDB.InsertDataFromArryToMySql(array1, "tbl_prime_number", "column_prime_number");
-        storePattern = connectDB.readDataBase("tbl_prime_number", "column_prime_number");
-        System.out.println("Data is reading from the Table (tbl_prime_number) and displaying to the console");
+        connectDB.insertDataFromArrayToMySql(array1, "PrimeNum_table", "PrimeNum_column");
+        storePattern = connectDB.readDataBase("PrimeNum_table", "PrimeNum_column");
+        System.out.println("Data retrieved from primeNum_table is : ");
         for (String st : storePattern) {
             System.out.print(st + " ");
         }

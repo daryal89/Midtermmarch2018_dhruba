@@ -20,11 +20,11 @@ public class EmployeeInfo extends AbstractEmployee {
      * declare few static and final fields and some non-static fields
      */
     static String companyName;
-    private static double salary;
+   private static double salary;
     private int employeeId;
     private String employeeName;
     private String departmentName;
-    //private double salary;
+   // private double salary;
     private int performance;
 
     /*
@@ -67,11 +67,6 @@ public class EmployeeInfo extends AbstractEmployee {
     @Override
     public void assignDepartment() {
 
-    }
-
-    @Override
-    public double calculateSalary() {
-        return 0;
     }
 
     public double getSalary() {
